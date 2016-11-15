@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PharmaWay Mailing</title>
+    <meta name="theme-color" content="#9ad5ff" />
+    <meta http-equiv="Content-Type" content="text/html;  charset=UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+
+        @font-face {
+            font-family: 'AntonioLight';
+
+            src: url('Antonio-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+
+        }
+
+        @font-face {
+            font-family: 'AntonioRegular';
+
+            src: url('Antonio-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+
+        }
+
+        @font-face {
+            font-family: 'AntonioBold';
+
+            src: url('Antonio-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+
+        }
+
+        body {
+            font-family: 'AntonioBold';
+            font-stretch: condensed;
+            margin: 0;
+            background-image: url("img/background.jpg");
+            background-repeat: space;
+        }
+
+        body {
+            background-position: center top;
+        }
+
+        #topBar {
+            width: 100%;
+            background-image: url("img/background_top.png");
+            background-repeat: no-repeat;
+
+            background-size: 100% 100%;
+            display: inline-block;
+        }
+
+        #leftLogos {
+            width: 55%;
+            display: inline-block;
+            float: left;
+
+        }
+
+        #rightMenu {
+            width: 45%;
+            height: 100px;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logos {
+            width: 256px;
+            margin-bottom: 40px;
+
+            margin-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .logos {
+                width: 256px;
+                display: block;
+                margin: 0 auto;
+
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+            }
+
+            body {
+                background-position: center 320px;
+            }
+
+            #redpart {
+                width: 360px;
+                background: red;
+                padding: 20px;
+                display: block;
+                margin: auto;
+                border-radius: 15px;
+            }
+
+            #content5 p {
+                display: block;
+                width: 320px;
+            }
+
+            #content5 p.question {
+                display: block;
+                width: 400px;
+            }
+
+            .checkbox_red {
+                width: 400px;
+            }
+
+            textarea {
+                width: 380px;
+            }
+        }
+
+        @media screen and (min-width: 1160px) {
+            #content1 {
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+
+            #content2 {
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+
+            #content3 {
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+
+            #rightMenu a {
+                margin-top: 30px;
+            }
+
+            .packs {
+                margin: 30px;
+                float: right;
+                position: relative;
+                top: -150px;
+                padding: 20px;
+                z-index: -10;
+                position: relative;
+            }
+
+            .nowidth {
+                float: right;
+                height: 10px;
+                position: relative;
+            }
+
+            #konkurs_wakacyjny {
+                float: right;
+                padding-right: 20px;
+                position: relative;
+                top: -20px;
+
+            }
+
+            .place {
+                width: 33%;
+            }
+
+            #redpart {
+                width: 1042px;
+                background: red;
+                padding: 10px 60px;
+                display: block;
+                margin: auto;
+                border-radius: 15px;
+            }
+
+            #content5 p {
+                display: block;
+                width: 660px;
+            }
+
+            #content5 p.question {
+                display: block;
+                width: 1150px;
+            }
+
+            .checkbox_red {
+                width: 1150px;
+            }
+
+            textarea {
+                width: 1140px;
+            }
+        }
+
+        @media screen and (max-width: 1160px) and (min-width: 640px) {
+
+            #redpart {
+                width: 642px;
+                background: red;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                border-radius: 15px;
+            }
+
+            #content5 p {
+                display: block;
+                width: 660px;
+            }
+
+            #content5 p.question {
+                display: block;
+                width: 660px;
+            }
+
+            .checkbox_red {
+                width: 660px;
+            }
+
+            textarea {
+                width: 640px;
+            }
+        }
+
+        @media screen and (max-width: 1160px) {
+
+            .place {
+                width: 100%;
+            }
+
+            body {
+                background-position: center 100px;
+            }
+
+            #topBar {
+                width: 100%;
+
+                display: inline-block;
+            }
+
+            #leftLogos {
+                background: white;
+                width: 100%;
+                float: left;
+            }
+
+            .logos {
+                margin-bottom: 0px;
+            }
+
+            #rightMenu {
+                width: 100%;
+                height: 100px;
+                float: left;
+
+                background-image: url("img/background_top2.png");
+                background-repeat: no-repeat;
+
+                background-size: 100% 100%;
+                display: inline-block;
+            }
+        }
+
+        #rightMenu a {
+            display: inline-block;
+            color: red;
+            text-align: center;
+            width: 32%;
+            padding: 14px 0px;
+
+            margin-left: 0px;
+            margin-right: 0px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 25px;
+        }
+
+        #rightMenu a:hover {
+            color: darkred;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: -1px 15px 0 0;
+            vertical-align: middle;
+            background: url("img/checkbox.png") left top no-repeat;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked + label span {
+            background: url("img/checkbox_selected.png") left top no-repeat;
+        }
+
+        label:first-line {
+            background: orange;
+            padding-left: 100px;
+        }
+
+        #content5 input[type="checkbox"] {
+            display: none;
+        }
+
+        #content5 input[type="checkbox"] + label span {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            margin: -1px 15px 0 0;
+            vertical-align: middle;
+            background: url("img/checkbox_red.png") left top no-repeat;
+            cursor: pointer;
+        }
+
+        #content5 input[type="checkbox"]:checked + label span {
+            background: url("img/checkbox_selected_red.png") left top no-repeat;
+        }
+
+        #redAlert {
+            background: red;
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 15px;
+
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .italicGray {
+
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            color: #666666;
+            font-style: italic;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .checkbox {
+            width: 450px;
+            margin: auto;
+            margin-top: 10px;
+            color: #666666;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .checkbox_red {
+
+            margin: auto;
+            margin-top: 10px;
+            color: #666666;
+            font-family: "AntonioRegular";
+            text-indent: 0px;
+            font-size: 24px;
+
+        }
+
+        #gradient {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            min-height: 100%;
+            z-index: -100;
+
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 1));
+        }
+
+        #next {
+            background: red;
+            width: 140px;
+            margin: auto;
+            margin-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        #wyslij {
+            background: red;
+            width: 220px;
+            margin: auto;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        #wyslij:hover {
+            background: darkred;
+        }
+
+        #biore_udzial {
+            float: right;
+            background: red;
+            width: 250px;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 15px;
+            margin: 20px;
+            cursor: pointer;
+            cursor: hand;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #biore_udzial:hover {
+            background: darkred;
+        }
+
+        #next:hover {
+            background: darkred;
+        }
+
+        .packs {
+            margin-top: 50px;
+            display: block;
+            margin: auto;
+
+            z-index: -10;
+        }
+
+        #konkurs_wakacyjny {
+            margin: auto;
+            display: block;
+        }
+
+        .place {
+            float: left;
+        }
+
+        .place img {
+            margin: 0 auto;
+            display: block;
+            padding: 20px;
+        }
+
+        #content5 {
+            color: #666666;
+            font-size: 20px;
+        }
+
+        #content5 p {
+            display: block;
+            margin: auto;
+            padding-top: 5px;
+            font-size: 24px;
+            font-family: AntonioRegular;
+        }
+
+        #content5 p.question {
+            padding-top: 35px;
+            display: block;
+        }
+
+        .questionnumber {
+            color: red;
+        }
+
+        #redInput {
+            display: block;
+            width: 600px;
+        }
+
+        #redInput input {
+            width: 295px;
+            height: 30px;
+            display: inline;
+            margin: 5px;
+            padding-left: 10px;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+<div id="gradient">
+
+</div>
+
+
+<div id="topBar">
+    <div id="leftLogos">
+        <img class="logos" src="img/logo1.png">
+        <img class="logos" src="img/logo2.png">
+    </div>
+    <div id="rightMenu">
+        <a href="https://docs.google.com/viewer?url=http://rjuszczyk.pl/pharmawayMailing/regulamin.pdf">Regulamin konkursu</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="http://multilac.pl/">Informacja o produkcie</a>
+    </div>
+</div>
+
+<div id="container">
+    <div id="content1" style="display: none">
+        <div id="redAlert">
+            Konkurs adresowany jest wyłącznie do lekarzy pediatrów i lekarzy medycyny rodzinnej
+        </div>
+        <div class="italicGray">Potwierdź, żeby przejść dalej</div>
+        <div class="checkbox">
+            <input type="checkbox" id="c1" onchange="onChangeFirst()" name="cc"/>
+            <label for="c1"><span></span>Jestem lekarzem pediatrą</label>
+        </div>
+        <div class="checkbox" style="padding-top: 10px">
+            <input type="checkbox" id="c2" onchange="onChangeFirst()" name="cc"/>
+            <label for="c2"><span></span>Jestem lekarzem medycyny rodzinnej</label>
+        </div>
+
+        <div id="next" onclick="goToPytania()">Dalej</div>
+
+
+        <div class="nowidth">
+            <img class="packs" src="img/packs.png">
+        </div>
+    </div>
+    <div id="content2">
+        <div style="width: 100%; display: inline-block">
+            <img id="konkurs_wakacyjny" src="img/konkurs_wakacyjny.png"/>
+        </div>
+        <div style="width: 100%; margin-top: 20px">
+            <img style="margin: 0 auto; display: block; float: none" src="img/i_miejsce.png"/>
+        </div>
+
+        <div style="width: 100%; margin-top: 20px">
+            <div class="place">
+                <img src="img/ii_miejsce.png"/>
+            </div>
+
+            <div class="place">
+                <img src="img/iii_miejsce.png"/>
+            </div>
+            <div class="place">
+                <img src="img/pozostali.png"/>
+            </div>
+        </div>
+
+        <div id="biore_udzial" onclick="openPage('start')">Biorę udział w konkursie</div>
+    </div>
+
+    <div id="content3" style="display: none">
+        <img style="margin: 0 auto; padding-top: 50px; display: block; float: none" src="img/kontakt_txt1.png"/>
+
+        <img onclick="window.open('http://www.google.pl');"
+             style="margin: 0 auto; cursor: pointer; cursor: hand; margin-top: 50px; margin-bottom: 50px; display: block; float: none"
+             src="img/kontakt_link.png"/>
+
+        <div class="nowidth" style="margin-top: 100px">
+            <img class="packs" src="img/packs.png">
+        </div>
+    </div>
+
+    <div id="content4" style="display: none">
+        <img style="margin: 0 auto; padding-top: 220px; display: block; float: none" src="img/dziekujemy1.png"/>
+
+        <img onclick="window.open('http://www.genexokonkurs.pl');"
+             style="margin: 0 auto; cursor: pointer; cursor: hand; margin-top: 30px; display: block; float: none"
+             src="img/dziekujemy_link.png"/>
+
+        <img style="margin: 0 auto; padding-top: 30px; display: block; margin-bottom: 50px;  float: none"
+             src="img/dziekujemy_date.png"/>
+        <div class="nowidth" style="margin-top: 50px">
+            <img class="packs" src="img/packs.png">
+        </div>
+    </div>
+
+    <div id="content5" style="display: none">
+        <p class="question">
+            <span class="questionnumber">1.</span> <strong>Multilac</strong> <sup>®</sup> to synbiotyk o właściwościach
+            potwierdzonych w badaniach, w których wykazano:
+        </p>
+        <div class="checkbox_red">
+            <input type="checkbox" id="c3" onchange="onChange()" name="cc"/>
+            <label for="c3"><span></span>Odporność na działanie kwasu solnego</label>
+        </div>
+
+        <div class="checkbox_red">
+            <input type="checkbox" id="c4" onchange="onChange()" name="cc"/>
+            <label for="c4"><span></span>Wysoką zdolność adhezji do komórek nabłonka jelitowego</label>
+        </div>
+
+        <p class="question">
+            <span class="questionnumber">2.</span> <strong>Multilac</strong> <sup>®</sup> <strong>Baby</strong> to
+            synbiotyk:
+        </p>
+
+        <div class="checkbox_red">
+            <input type="checkbox" id="c5" onchange="onChange()" name="cc"/>
+            <label for="c5"><span></span>Zawierający aż 9 szczepów żywych bakterii, w tym <i>Lactobacillus rhamnosus
+                GG</i></label>
+        </div>
+
+        <div class="checkbox_red">
+            <input type="checkbox" id="c6" onchange="onChange()" name="cc"/>
+
+            <label for="c6"><span></span>Oparty na innowacyjnej technologii Micro MURE <sup>®</sup>, która chroni
+                bakterie przed niszczącym działaniem kwasu solnego
+            </label>
+
+        </div>
+
+        <div class="checkbox_red">
+            <input type="checkbox" id="c7" onchange="onChange()" name="cc"/>
+            <label for="c7"><span></span>Do zastosowania od 4 miesiąca życia</label>
+        </div>
+
+        <p class="question">
+            <span class="questionnumber">3.</span> Dokończ zdanie. Swoim pacjentom rekomenduję stosowanie preparatów
+            <strong>Multilac</strong> <sup>®</sup> <strong>i Multilac</strong> <sup>®</sup> <strong>Baby</strong>,
+            ponieważ...
+
+        </p>
+
+        <textarea id="textarea" name="Text1"
+                  style="border-radius: 15px; margin: auto; display: block; margin-top:20px;  padding: 10px; border-color: red;"
+                  rows="10"></textarea>
+
+        <div style="width: 100%; margin: 10px;">
+            <p id="odpnawszystkie" style="color: red; text-align: center; margin: 0 auto; display: block"><i>Proszę
+                odpowiedzieć na wszystkie pytania.</i>
+            </p>
+        </div>
+
+        <div id="redpart">
+            <p style="color: white; font-size: 25px; padding: 10px; text-align: center; margin: 0 auto; display: block; ">
+                UZUPEŁNIJ DANE OSOBOWE</p>
+
+            <div id="redInput" style="width: 100%; ">
+                <input type="text" id="t1" name="t1" value="Imię*" onfocus="if(this.value === 'Imię*')this.value=''"/>
+                <input type="text" id="t2" name="t2" value="Nazwisko*"
+                       onfocus="if(this.value === 'Nazwisko*')this.value=''"/>
+                <input type="text" id="t3" name="t3" value="Ulica" onfocus="if(this.value === 'Ulica')this.value=''"/>
+                <input type="text" id="t4" name="t4" value="Nr" onfocus="if(this.value === 'Nr')this.value=''"/>
+                <input type="text" id="t5" name="t5" value="Miasto" onfocus="if(this.value === 'Miasto')this.value=''"/>
+                <input type="text" id="t6" name="t6" value="Kod pocztowy"
+                       onfocus="if(this.value === 'Kod pocztowy')this.value=''"/>
+
+                <input type="text" id="t7" name="t7" value="Telefon*"
+                       onfocus="if(this.value === 'Telefon*')this.value=''"/>
+                <input type="text" id="t8" name="t8" value="E-mail*"
+                       onfocus="if(this.value === 'E-mail*')this.value=''"/>
+
+                <div onclick="checkboxChange('#ch1');">
+                    <div style="display: table-cell; vertical-align: middle; padding: 5px;"
+                         onclick="checkboxChange('#ch1');">
+                        <img id="ch1" src="img/checkbox_white.png" onclick="checkboxChange('#ch1');">
+                        <img id="ch1s" style="display: none" src="img/checkbox_selected_white.png"
+                             onclick="checkboxChange('#ch1');">
+                    </div>
+                    <div onclick="checkboxChange('#ch1');"
+                         style="display: table-cell; padding: 5px; font-size: 16px; font-family: AntonioLight;  color: white;">
+                        Oświadczam, że zapoznałem się z Regulaminem, akceptuję jego treść oraz spełniam jego warunki.*
+                    </div>
+                </div>
+
+                <div onclick="checkboxChange('#ch2');">
+                    <div style="display: table-cell; vertical-align: middle; padding: 5px;"
+                         onclick="checkboxChange('#ch2');">
+                        <img id="ch2" src="img/checkbox_white.png" onclick="checkboxChange('#ch2');">
+                        <img id="ch2s" style="display: none" src="img/checkbox_selected_white.png"
+                             onclick="checkboxChange('#ch2');">
+                    </div>
+                    <div onclick="checkboxChange('#ch2');"
+                         style="display: table-cell; padding: 5px; font-size: 16px;  font-family: AntonioLight; color: white;">
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych w celach marketingowych zgodnie z
+                        przepisami ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2014 poz.
+                        1182). Administratorem danych jest PharmaWay, ul. Księżarskiego 4, 30-376 Kraków. Moje dane
+                        udostępniam dobrowolnie, przysługuje mi prawo dostępu do nich oraz ich poprawiania na warunkach
+                        określonych w ustawie o ochronie danych osobowych.*
+                    </div>
+                </div>
+
+
+                <div onclick="checkboxChange('#ch3');">
+                    <div style="display: table-cell; vertical-align: middle; padding: 5px;"
+                         onclick="checkboxChange('#ch3');">
+                        <img id="ch3" src="img/checkbox_white.png" onclick="checkboxChange('#ch3');">
+                        <img id="ch3s" style="display: none" src="img/checkbox_selected_white.png"
+                             onclick="checkboxChange('#ch3');">
+                    </div>
+                    <div onclick="checkboxChange('#ch3');"
+                         style="display: table-cell; padding: 5px; font-size: 16px; font-family: AntonioLight; color: white;">
+                        Wyrażam zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej zgodnei
+                        z przepisami ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. 2002
+                        r. nr 144, poz. 1204 z późn. zm.)
+                    </div>
+                </div>
+
+
+                <div >
+                    <div style="width: 22px; display: table-cell; vertical-align: middle; padding: 5px;" ">
+
+                    </div>
+                    <div
+                         style="display: table-cell; padding: 5px; font-size: 16px;  font-family: AntonioLight; color: white;">
+                        *Dane wymagane
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%; margin: 10px;">
+            <p id="proszeuzupelnic" style="color: red; text-align: center; margin: 0 auto; display: block"><i>Proszę
+                uzupełnić wymagane pola.</i>
+            </p>
+        </div>
+
+        <div id="wyslij" onclick="onWyslij()">WYŚLIJ ZGŁOSZENIE</div>
+    </div>
+</div>
+
+
+<script>
+    $("#textarea").on('change keyup paste', function () {
+        onChange();
+    });
+
+    $("#t1").on('change keyup paste', function () {
+        onChange2();
+    });
+    $("#t2").on('change keyup paste', function () {
+        onChange2();
+    });
+    $("#t7").on('change keyup paste', function () {
+        onChange2();
+    });
+    $("#t8").on('change keyup paste', function () {
+        onChange2();
+    });
+
+
+    function isValueOk(value) {
+        if (value === '') {
+            return false;
+        }
+        if (value.includes("*")) {
+            return false;
+        }
+        return true;
+    }
+
+    function areValuesOk() {
+        return ($("#c3")[0].checked || $("#c4")[0].checked) &&
+            ($("#c5")[0].checked || $("#c6")[0].checked || $("#c7")[0].checked) &&
+            $("#textarea")[0].value != '';
+    }
+
+    function onWyslij() {
+        if (areValues2Ok() && areValuesOk()) {
+            <!--$.post( "example.php", { name: "John", time: "2pm" }, function() {-->
+            <!--alert( "success" );-->
+            <!--}).fail(function() {-->
+            <!--alert( "error" );-->
+            <!--});-->
+
+            openPage('podziekowania');
+        }
+    }
+
+    function onChange() {
+        if (
+            areValuesOk()
+
+        ) {
+            $("#odpnawszystkie").hide();
+            $("#redpart").css({opacity: 1});
+            onChange2();
+
+        } else {
+            $("#odpnawszystkie").show();
+            $("#redpart").css({opacity: 0.5});
+            $("#wyslij").css({opacity: 0.5});
+        }
+    }
+
+
+    function onChangeFirst() {
+        if (
+            $("#c1")[0].checked || $("#c2")[0].checked
+
+        ) {
+            // $("#odpnawszystkie").hide();
+            $("#next").css({opacity: 1});
+            onChange2();
+
+        } else {
+            //  $("#odpnawszystkie").show();
+            $("#next").css({opacity: 0.5});
+        }
+    }
+
+    function goToPytania() {
+        if ($("#c1")[0].checked || $("#c2")[0].checked) {
+            openPage('pytania');
+        }
+    }
+    var dict = {};
+    dict['#ch1'] = false;
+    dict['#ch2'] = false;
+    dict['#ch3'] = false;
+
+    function areValues2Ok() {
+        return isValueOk($("#t1")[0].value) && isValueOk($("#t2")[0].value) &&
+            isValueOk($("#t7")[0].value) && isValueOk($("#t8")[0].value) &&
+            dict['#ch1'] && dict['#ch2'];
+    }
+
+    function onChange2() {
+        if (
+            areValues2Ok()
+        ) {
+            $("#proszeuzupelnic").hide();
+            $("#wyslij").css({opacity: 1});
+        } else {
+            $("#proszeuzupelnic").show();
+            $("#wyslij").css({opacity: 0.5});
+        }
+    }
+
+    onChange();
+    onChange2();
+    onChangeFirst();
+    function checkboxChange(id) {
+        dict[id] = !dict[id];
+        if (dict[id]) {
+            $(id).hide();
+            $(id + "s").show();
+        } else {
+            $(id).show();
+            $(id + "s").hide();
+        }
+        onChange2();
+    }
+
+    function openPage(page) {
+        window.location.hash = page;
+    }
+
+    function goNext2() {
+        $("#content1").hide();
+        $("#content2").show();
+        //$("div").remove("#content1");
+//        var container = document.getElementById("container");
+//        var content = document.getElementById("content");
+//        container.removeChild(content);
+        //alert("testest");
+    }
+
+
+    function clearAllVals() {
+        dict['#ch1'] = true;
+        dict['#ch2'] = true;
+        dict['#ch3'] = true;
+        checkboxChange('#ch1');
+        checkboxChange('#ch2');
+        checkboxChange('#ch3');
+
+        $("#c1")[0].checked = false;
+        $("#c2")[0].checked = false;
+        $("#c3")[0].checked = false;
+        $("#c4")[0].checked = false;
+        $("#c5")[0].checked = false;
+        $("#c6")[0].checked = false;
+        $("#c7")[0].checked = false;
+
+        $("#textarea")[0].value = '';
+        $("#t1")[0].value = 'Imię*';
+        $("#t2")[0].value = 'Nazwisko*';
+        $("#t3")[0].value = 'Ulica';
+        $("#t4")[0].value = 'Nr';
+        $("#t5")[0].value = 'Miasto';
+        $("#t6")[0].value = 'Kod pocztowy';
+        $("#t7")[0].value = 'Telefon*';
+        $("#t8")[0].value = 'E-mail*';
+    }
+
+    window.onload = function () {
+        if (location.hash.length > 0) {
+
+            if (location.hash === '#podziekowania') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").show();
+                $("#content5").hide();
+            }
+            if (location.hash === '#kontakt') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").show();
+                $("#content4").hide();
+
+                $("#content5").hide();
+            }
+            if (location.hash === '#pytania') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+                $("#content5").show();
+            }
+            if (location.hash === '#start') {
+                $("#content1").show();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+                $("#content5").hide();
+            }
+        } else {
+            $("#content1").hide();
+            $("#content2").show();
+            $("#content3").hide();
+            $("#content4").hide();
+            $("#content5").hide();
+        }
+    }
+    window.onhashchange = function () {
+
+
+        if (location.hash.length > 0) {
+
+            if (location.hash === '#podziekowania') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").show();
+                $("#content5").hide();
+
+                clearAllVals();
+            }
+            if (location.hash === '#kontakt') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").show();
+                $("#content4").hide();
+                $("#content5").hide();
+            }
+            if (location.hash === '#pytania') {
+                $("#content1").hide();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+                $("#content5").show();
+            }
+            if (location.hash === '#start') {
+                $("#content1").show();
+                $("#content2").hide();
+                $("#content3").hide();
+                $("#content4").hide();
+                $("#content5").hide();
+            }
+        } else {
+            $("#content1").hide();
+            $("#content2").show();
+            $("#content3").hide();
+            $("#content4").hide();
+            $("#content5").hide();
+        }
+    }
+</script>
+
+</body>
+</html>
+
