@@ -33,7 +33,7 @@
             font-stretch: condensed;
             margin: 0;
             background-image: url("img/background.jpg");
-            background-repeat: space;
+            background-repeat: no-repeat;
         }
 
         body {
@@ -73,7 +73,87 @@
             padding-right: 30px;
         }
 
+
+
+        @media screen and (max-height: 440px){
+            #content3 {
+            }
+        }
+
+        @media screen and (max-height: 640px)  and (min-height: 440px){
+            #content3 {
+            }
+        }
+
+        @media screen and (max-height: 740px)  and (min-height: 640px){
+            #content3 {
+                padding-top: 25px;
+            }
+            #content1 {
+                padding-top: 0px;
+            }
+            #content3 .packs {
+                margin-top: 40px;
+            }
+        }
+        @media screen and (max-height: 840px)  and (min-height: 740px){
+            #content3 {
+                padding-top:75px;
+            }
+            #content1 {
+                padding-top: 50px;
+            }
+            #content3 .packs {
+                margin-top: 60px;
+            }
+        }
+
+        @media screen and (max-height: 940px)  and (min-height: 840px){
+            #content3 {
+                padding-top:155px;
+            }
+            #content1 {
+                padding-top: 100px;
+            }
+            #content3 .packs {
+                margin-top: 90px;
+            }
+        }
+
+        @media screen and (max-height: 1040px)  and (min-height: 940px){
+            #content3 {
+                padding-top:175px;
+            }
+            #content1 {
+                padding-top: 130px;
+            }
+            #content3 .packs {
+                margin-top: 100px;
+            }
+        }
+        @media screen and (max-height: 1240px)  and (min-height: 1040px){
+            #content3 {
+                padding-top: 200px;
+            }
+            #content3 .packs {
+                margin-top: 150px;
+            }
+        }
+        @media screen and (max-height: 1440px)  and (min-height: 1240px){
+            #content3 {
+                padding-top: 220px;
+            }
+        }
+        @media screen and (max-height: 1640px)  and (min-height: 1440px){
+            #content3 {
+                padding-top: 370px;
+            }
+        }
+
         @media screen and (max-width: 640px) {
+
+
+
             .logos {
                 width: 256px;
                 display: block;
@@ -116,7 +196,26 @@
             }
         }
 
+        #redInput input {
+            width: 295px;
+            height: 30px;
+            display: inline;
+            margin: 5px;
+            padding-left: 10px;
+
+        }
+
         @media screen and (min-width: 1160px) {
+
+            #redInput input {
+                width: 490px;
+                height: 30px;
+                display: inline;
+                margin: 10px 10px 10px 5px;
+                padding-left: 10px;
+
+            }
+
             #content1 {
                 margin-left: 70px;
                 margin-right: 70px;
@@ -376,7 +475,7 @@
             min-height: 100%;
             z-index: -100;
 
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 1));
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.45), rgba(255, 0, 0, 1));
         }
 
         #next {
@@ -430,7 +529,8 @@
             padding-top: 5px;
             padding-bottom: 5px;
             border-radius: 15px;
-            margin: 20px;
+            margin-right: 20px;
+            margin-top: 35px;
             cursor: pointer;
             cursor: hand;
             color: white;
@@ -496,14 +596,7 @@
             width: 600px;
         }
 
-        #redInput input {
-            width: 295px;
-            height: 30px;
-            display: inline;
-            margin: 5px;
-            padding-left: 10px;
 
-        }
 
 
     </style>
@@ -511,11 +604,11 @@
 
 <body>
 
-
+<!--
 <div id="gradient">
 
 </div>
-
+-->
 
 <div id="topBar">
     <div id="leftLogos">
@@ -579,7 +672,7 @@
         <img style="margin: 0 auto; padding-top: 50px; display: block; float: none" src="img/kontakt_txt1.png"/>
 
         <img onclick="window.open('http://www.google.pl');"
-             style="margin: 0 auto; cursor: pointer; cursor: hand; margin-top: 50px; margin-bottom: 50px; display: block; float: none"
+             style="margin: 0 auto; cursor: pointer; cursor: hand; margin-top: 10px; margin-bottom: 50px; display: block; float: none"
              src="img/kontakt_link.png"/>
 
         <div class="nowidth" style="margin-top: 100px">
@@ -602,6 +695,9 @@
     </div>
 
     <div id="content5" style="display: none">
+
+        <img src="img/zaznacz_wszystkie.png" style="margin: auto; display: block; margin-top: 50px" />
+
         <p class="question">
             <span class="questionnumber">1.</span> <strong>Multilac</strong> <sup>®</sup> to synbiotyk o właściwościach
             potwierdzonych w badaniach, w których wykazano:
@@ -614,6 +710,11 @@
         <div class="checkbox_red">
             <input type="checkbox" id="c4" onchange="onChange()" name="cc"/>
             <label for="c4"><span></span>Wysoką zdolność adhezji do komórek nabłonka jelitowego</label>
+        </div>
+
+        <div class="checkbox_red">
+            <input type="checkbox" id="c44" onchange="onChange()" name="cc"/>
+            <label for="c44"><span></span>Zdolność do szybkiego wzrostu i namnażania</label>
         </div>
 
         <p class="question">
@@ -653,17 +754,16 @@
                   rows="10"></textarea>
 
         <div style="width: 100%; margin: 10px;">
-            <p id="odpnawszystkie" style="color: red; text-align: center; margin: 0 auto; display: block"><i>Proszę
-                odpowiedzieć na wszystkie pytania.</i>
+            <p id="odpnawszystkie" style="color: red; text-align: center; margin: 0 auto; display: block; padding-top: 5px;"><i>Proszę odpowiedzieć na wszystkie pytania.</i>
             </p>
         </div>
 
-        <div id="redpart">
+        <div id="redpart" style="margin-top: 20px">
             <p style="color: white; font-size: 25px; padding: 10px; text-align: center; margin: 0 auto; display: block; ">
                 UZUPEŁNIJ DANE OSOBOWE</p>
 
             <div id="redInput" style="width: 100%; ">
-                <input type="text" id="t1" name="t1" value="Imię*" onfocus="if(this.value === 'Imię*')this.value=''"/>
+                <input type="text" id="t1" name="t1"  value="Imię*" onfocus="if(this.value === 'Imię*')this.value=''"/>
                 <input type="text" id="t2" name="t2" value="Nazwisko*"
                        onfocus="if(this.value === 'Nazwisko*')this.value=''"/>
                 <input type="text" id="t3" name="t3" value="Ulica" onfocus="if(this.value === 'Ulica')this.value=''"/>
@@ -680,8 +780,8 @@
                 <div onclick="checkboxChange('#ch1');">
                     <div style="display: table-cell; vertical-align: middle; padding: 5px;"
                          onclick="checkboxChange('#ch1');">
-                        <img id="ch1" src="img/checkbox_white.png" onclick="checkboxChange('#ch1');">
-                        <img id="ch1s" style="display: none" src="img/checkbox_selected_white.png"
+                        <img id="ch1" src="img/checkbox_white.png"  style="display: none" onclick="checkboxChange('#ch1');">
+                        <img id="ch1s" src="img/checkbox_selected_white.png"
                              onclick="checkboxChange('#ch1');">
                     </div>
                     <div onclick="checkboxChange('#ch1');"
@@ -693,8 +793,8 @@
                 <div onclick="checkboxChange('#ch2');">
                     <div style="display: table-cell; vertical-align: middle; padding: 5px;"
                          onclick="checkboxChange('#ch2');">
-                        <img id="ch2" src="img/checkbox_white.png" onclick="checkboxChange('#ch2');">
-                        <img id="ch2s" style="display: none" src="img/checkbox_selected_white.png"
+                        <img id="ch2" src="img/checkbox_white.png" style="display: none" onclick="checkboxChange('#ch2');">
+                        <img id="ch2s" src="img/checkbox_selected_white.png"
                              onclick="checkboxChange('#ch2');">
                     </div>
                     <div onclick="checkboxChange('#ch2');"
@@ -777,7 +877,7 @@
     }
 
     function areValuesOk() {
-        return ($("#c3")[0].checked || $("#c4")[0].checked) &&
+        return ($("#c3")[0].checked || $("#c4")[0].checked || $("#c44")[0].checked) &&
             ($("#c5")[0].checked || $("#c6")[0].checked || $("#c7")[0].checked) &&
             $("#textarea")[0].value != '';
     }
@@ -832,8 +932,8 @@
         }
     }
     var dict = {};
-    dict['#ch1'] = false;
-    dict['#ch2'] = false;
+    dict['#ch1'] = true;
+    dict['#ch2'] = true;
     dict['#ch3'] = false;
 
     function areValues2Ok() {
@@ -885,8 +985,8 @@
 
 
     function clearAllVals() {
-        dict['#ch1'] = true;
-        dict['#ch2'] = true;
+        dict['#ch1'] = false;
+        dict['#ch2'] = false;
         dict['#ch3'] = true;
         checkboxChange('#ch1');
         checkboxChange('#ch2');
@@ -896,6 +996,7 @@
         $("#c2")[0].checked = false;
         $("#c3")[0].checked = false;
         $("#c4")[0].checked = false;
+        $("#c44")[0].checked = false;
         $("#c5")[0].checked = false;
         $("#c6")[0].checked = false;
         $("#c7")[0].checked = false;
@@ -909,6 +1010,10 @@
         $("#t6")[0].value = 'Kod pocztowy';
         $("#t7")[0].value = 'Telefon*';
         $("#t8")[0].value = 'E-mail*';
+
+        onChangeFirst();
+        onChange2();
+        onChange();
     }
 
     window.onload = function () {
@@ -944,11 +1049,15 @@
                 $("#content5").hide();
             }
         } else {
+
+            clearAllVals();
             $("#content1").hide();
             $("#content2").show();
             $("#content3").hide();
             $("#content4").hide();
             $("#content5").hide();
+
+
         }
     }
     window.onhashchange = function () {
